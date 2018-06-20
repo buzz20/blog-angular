@@ -1,0 +1,11 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': status === 'positif',
+                'list-group-item-danger': status === 'négatif'}">
+ <p [ngStyle] ="{'font-style': 'italic', color: 'grey'}">{{ createdAt | date: 'short'}}</p>
+  <h3 [ngStyle] ="{'font-weight': 'bold'}"> {{ title }} </h3>
+  <h4> {{ content }}</h4>
+  <div class="btn-toolbar">
+  <button [ngStyle]="{'background-color': 'darkgreen', 'border-color': 'darkgreen'}"class="btn btn-success" (click)="like()">Love it!</button>
+  <button [ngStyle]="{'background-color': 'darkred', 'border-color': 'darkred'}" class="btn btn-success" (click)="unlike()">Don't love it!</button>
+  </div>
+</li>

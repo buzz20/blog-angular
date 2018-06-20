@@ -1,0 +1,12 @@
+<h2 [ngStyle] ="{'font-weight': 'bold'}">
+  Posts
+</h2>
+<ul class="list-group">
+  <ul class="list-group">
+    <app-post-list-item-component *ngFor="let post of posts"
+                              [title] = "post.title"
+                              [content] = "post.content"
+                              [loveIts] = "post.loveIts"
+                              [createdAt] = "post.created_at"></app-post-list-item-component>
+  </ul>
+</ul>
